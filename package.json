@@ -1,0 +1,135 @@
+{
+  "name": "ra-men",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "imutable": "^0.0.1",
+    "linq": "^3.2.1",
+    "react": "^16.11.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "react-router-dom": "^5.1.2",
+    "react-script": "^2.0.5",
+    "react-scripts": "^3.2.0",
+    "redux": "^4.0.4",
+    "styled-components": "^4.4.1",
+    "webpack": "^4.41.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-react": "^7.7.0",
+    "@babel/preset-typescript": "^7.7.4",
+    "@types/chai": "^4.2.5",
+    "@types/enzyme": "^3.10.3",
+    "@types/enzyme-adapter-react-16": "^1.0.5",
+    "@types/enzyme-to-json": "^1.5.3",
+    "@types/jest": "^24.0.23",
+    "@types/mocha": "^5.2.7",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-redux": "^7.1.5",
+    "@types/react-router-dom": "^5.1.2",
+    "@types/react-test-renderer": "^16.9.1",
+    "@types/styled-components": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-react-remove-properties": "^0.3.0",
+    "cache-loader": "^4.1.0",
+    "chai": "^4.2.0",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.5",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
+    "enzyme-to-json": "^3.4.3",
+    "eslint": "^6.7.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint_d": "^8.0.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.19.1",
+    "prettier_d": "^5.7.4",
+    "react-test-renderer": "^16.12.0",
+    "thread-loader": "^2.1.3",
+    "ts-jest": "^24.2.0",
+    "ts-loader": "^6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-config-standard": "^8.0.1",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.7.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
+    "yarn-run-all": "^3.1.1"
+  },
+  "scripts": {
+    "build:d": "webpack --config ./webpack.dev.js --display-error-details --progress",
+    "build:p": "webpack --config ./webpack.prod.js --display-error-details --progress",
+    "development": "yarn run-p build:development",
+    "production": "yarn run-p build:production",
+    "docker:production": "docker-compose up --build -d & yarn webpack:production",
+    "docker:stop": "docker stop $(docker ps -a -q)",
+    "watch": "webpack-dev-server --config ./webpack.dev.js --display-error-details --progress --watch --color --info-verbosity verbose",
+    "check": "yarn run tsc --noEmit && yarn run tslint",
+    "tslint-fix": "tslint --fix --project tsconfig.json",
+    "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
+    "tslint": "tslint --fix --force --format stylish --project ./tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
+    "prettier": "prettier --write ./{src,__tests__}/**/*.{ts,tsx}",
+    "lint": "eslint 'src/**/*.ts[x]'",
+    "test": "jest --env=jsdom",
+    "test:c": "jest --env=jsdom --coverage",
+    "test:u": "jest -u --env=jsdom",
+    "test:onetime": "jest --env=jsdom"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$"
+    ],
+    "watchPathIgnorePatterns": [
+      "node_modules"
+    ],
+    "moduleNameMapper": {
+      "^@/(.+)": "<rootDir>/src/$1"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.ts"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "globals": {
+      "ts-jest": {
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  }
+}
