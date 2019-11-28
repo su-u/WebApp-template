@@ -78,7 +78,8 @@
     "webpack:p": "webpack --config ./webpack.prod.js --display-error-details --progress",
     "build:d": "yarn run-p webpack:d",
     "build:p": "yarn run-p webpack:p ",
-    "docker:p": "docker-compose up --build -d & yarn run build:p",
+    "docker:up": "docker-compose up --build -d",
+    "docker:p": "yarn run-p docker:up build:p",
     "docker:stop": "docker stop $(docker ps -a -q)",
     "watch": "webpack-dev-server --config ./webpack.dev.js --display-error-details --progress --watch --color --info-verbosity verbose",
     "check": "yarn run tsc --noEmit && yarn run tslint",
@@ -98,7 +99,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js, jsx, ts, tsx}": [
       "eslint --fix",
       "git add"
     ]
@@ -116,7 +117,8 @@
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
+      "js",
+      "ts"
     ],
     "setupFilesAfterEnv": [
       "<rootDir>/src/setupTests.ts"
