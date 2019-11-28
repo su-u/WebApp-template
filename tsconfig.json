@@ -1,6 +1,7 @@
 {
   "include": [
-    "./src/*"
+    "./src/*",
+    "./__tests__/*"
   ],
   "compilerOptions": {
     "outDir": "./dist",

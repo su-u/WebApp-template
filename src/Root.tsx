@@ -1,18 +1,14 @@
-import React from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
-import App from '@/App';
-import Top from '@/container/Top';
+import React from "react";
+import { Switch, Route, HashRouter } from "react-router-dom";
 import GlobalStyle from "@/components/GlobalStyle";
-import HeaderComponent from "@/components/Header";
+import App from "@/App";
 
 export default () => (
     <>
         <GlobalStyle />
         <HashRouter>
-            <HeaderComponent/>
             <Switch>
-                <Route exact path={'/'} component={Top} />
-                <Route path={'/:name'} component={App} />
+                <Route exact path={"/"} component={App} />
             </Switch>
         </HashRouter>
     </>
