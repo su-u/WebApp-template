@@ -10,7 +10,7 @@
     "docker:stop": "docker stop $(docker ps -a -q)",
     "watch": "webpack-dev-server --config webpack.dev.js --display-error-details --progress --watch --color --info-verbosity verbose",
     "prettier": "prettier --write ./**/{src,__tests__}/**/*.{ts,tsx,js,tsx}",
-    "prettier-all": "prettier --write ./*.{ts,tsx,js,tsx}",
+    "prettier-setting": "prettier --write ./*.{js,jsx,ts,tsx} ./.*.{js,jsx,ts,tsx}",
     "lint": "eslint ./**/src/**/*.ts[x]",
     "check": "yarn run tsc --noEmit && yarn run tslint",
     "test": "jest --env=jsdom",
