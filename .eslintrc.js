@@ -68,9 +68,6 @@ module.exports = {
       { property: 'freeze', object: 'Object' },
       { property: 'myFavoriteWrapper' },
     ],
-    linkComponents: [
-      'Hyperlink',
-      { name: 'Link', linkAttribute: 'to' },
-    ],
+    linkComponents: ['Hyperlink', { name: 'Link', linkAttribute: 'to' }],
   },
 };
