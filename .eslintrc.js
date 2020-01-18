@@ -11,14 +11,6 @@ module.exports = {
         es6: true,
         browser: true,
     },
-    parserOptions:  {
-        ecmaVersion:  2018,  // Allows for the parsing of modern ECMAScript features
-        sourceType:  'module',  // Allows for the use of imports
-        ecmaFeatures:  {
-            jsx: true,  // Allows for the parsing of JSX
-        },
-        project: "./tsconfig.json",
-    },
     rules: {
         "import/no-default-export": "error",
         "react/jsx-uses-vars": ["warn"],

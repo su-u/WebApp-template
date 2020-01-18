@@ -2,6 +2,13 @@
   "presets": [
     "@babel/preset-react",
     "@babel/preset-env",
-    "@babel/preset-typescript"
-  ]
+    "@babel/preset-typescript",
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        ["react-remove-properties", {"properties": ["data-test"]}]
+      ]
+    }
+  }
 }

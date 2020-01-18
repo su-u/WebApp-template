@@ -13,8 +13,8 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx$/,
-                use: ['thread-loader', 'cache-loader'],
-                include: path.resolve('src'),
+                use: ['thread-loader', 'cache-loader', 'babel-loader'],
+                include: path.resolve('./src'),
                 exclude: /node_modules/,
             },
             {
@@ -23,21 +23,7 @@ module.exports = {
                     {loader: 'html-loader'}
                 ],
             },
-            {
-                test: /\.svg$/,
-                use: [
-                    {
-                        loader: "babel-loader"
-                    },
-                    {
-                        loader: "react-svg-loader",
-                        options: {
-                            jsx: true
-                        }
-                    }
-                ]
-            }
-        ]
+        ],
     },
     resolve: {
         extensions: ['.ts', '.tsx', '.js', '.json'],
