@@ -36,6 +36,9 @@ module.exports = merge(common, {
     contentBase: 'dist',
     watchContentBase: true,
     hot: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*', // スクリプトを配布場所のオリジンと異なってもいいようにする
+    },
   },
   plugins: [new CleanWebpackPlugin(), new webpack.HotModuleReplacementPlugin()],
 });
