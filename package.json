@@ -111,7 +111,7 @@
       "node_modules"
     ],
     "moduleNameMapper": {
-      "^@/(.+)": "<rootDir>/src/$1"
+      "^@/(.+)": "<rootDir>/front/src/$1"
     },
     "moduleFileExtensions": [
       "ts",
@@ -120,7 +120,7 @@
       "ts"
     ],
     "setupFilesAfterEnv": [
-      "<rootDir>/src/setupTests.ts"
+      "<rootDir>/front/src/testUtilies/setupTests.ts"
     ],
     "moduleDirectories": [
       "node_modules"
