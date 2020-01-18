@@ -23,6 +23,6 @@ jobs:
           yarn run build:p
       - name: yarn test
         run: |
-          yarn test:u
+          yarn test
         env:
           CI: true
