@@ -8,7 +8,9 @@ module.exports = {
     path: `${__dirname}/dist`,
     filename: 'bundle.js?[hash]',
   },
-  entry: { main: ['@babel/polyfill', path.resolve(__dirname, './src/index.tsx')] },
+  entry: {
+    main: ['@babel/polyfill', path.resolve(__dirname, './src/index.tsx')],
+  },
   module: {
     rules: [
       {

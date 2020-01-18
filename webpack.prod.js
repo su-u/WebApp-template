@@ -28,7 +28,9 @@ module.exports = merge(common, {
           {
             loader: 'babel-loader',
             options: {
-              plugins: [['react-remove-properties', { properties: ['data-test'] }]],
+              plugins: [
+                ['react-remove-properties', { properties: ['data-test'] }],
+              ],
             },
           },
         ],

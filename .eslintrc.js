@@ -14,7 +14,13 @@ module.exports = {
       jsx: true,
     },
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended', 'plugin:prettier/recommended', 'prettier/react'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'prettier/react',
+    // 'airbnb',
+  ],
   globals: {
     window: 'readonly',
     location: 'readonly',
@@ -40,5 +46,6 @@ module.exports = {
     'linebreak-style': 'warn',
     'no-trailing-spaces': 'warn',
     'unicode-bom': 'warn',
+    'max-len': 'warn',
   },
 };
