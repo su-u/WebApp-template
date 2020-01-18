@@ -1,31 +1,36 @@
-module.exports = {
-    plugins: ["@typescript-eslint"],
-    parser: '@typescript-eslint/parser',
-    extends:  [
-        'plugin:prettier/recommended',
-        "plugin:react/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings"
+module.exports ={
+    "root": true,
+    "env": {
+        "es6": true,
+        "node": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+        "react",
+        "prettier"
     ],
-    env: {
-        es6: true,
-        browser: true,
-    },
-    rules: {
-        "import/no-default-export": "error",
-        "react/jsx-uses-vars": ["warn"],
-        "@typescript-eslint/no-unused-vars": "error",
-        "@typescript-eslint/no-unnecessary-type-assertion": "error",
-        "prettier/prettier": ['error'],
-    },
-    settings:  {
-        react:  {
-            version:  'detect',
-        },
-        "import/resolver": {
-            "webpack": {
-                "config": "webpack.config.js"
-            }
+    "parserOptions": {
+        "version": 2018,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
         }
     },
-}
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:prettier/recommended",
+        "prettier/react"
+    ],
+    "rules": {
+        "no-console": 0,
+        "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"],
+        "semi-spacing": ["error", {"after": true, "before": false}],
+        "semi-style": ["error", "last"],
+        "no-extra-semi": "error",
+        "no-unexpected-multiline": "error",
+        "no-unreachable": "error"
+    },
+};

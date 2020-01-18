@@ -16,6 +16,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.7.2",
+    "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "@babel/preset-typescript": "^7.7.4",
@@ -31,6 +32,7 @@
     "@types/styled-components": "^4.4.0",
     "@typescript-eslint/eslint-plugin": "^2.8.0",
     "@typescript-eslint/parser": "^2.16.0",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
     "babel-plugin-react-remove-properties": "^0.3.0",
     "cache-loader": "^4.1.0",
@@ -81,6 +83,7 @@
     "tslint:prettier-check": "tslint-config-prettier-check ./tslint.json",
     "tslint": "tslint --fix --force --format stylish --project tsconfig.json ./{src,__tests__}/**/*.{ts,tsx}",
     "prettier": "prettier --write ./**/{src,__tests__}/**/*.{ts,tsx,js,tsx}",
+    "prettier-all": "prettier --write ./*.{ts,tsx,js,tsx}",
     "lint": "eslint ./**/src/**/*.ts[x]",
     "test": "jest --env=jsdom",
     "test:c": "jest --env=jsdom --coverage",
