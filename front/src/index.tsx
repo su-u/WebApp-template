@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Root from '@/Root';
-import createFinalStore from '@/stores/createFinalStore';
+import Root from './Root';
+import createFinalStore from './stores/createFinalStore';
 
 const store = createFinalStore();
 

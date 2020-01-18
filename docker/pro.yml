@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - ./web/log:/var/log/nginx:z
+      - ./web/nginx.conf:/etc/nginx/nginx.conf:z
+      - ../front/dist:/var/www/html:z
+    ports:
+      - "3000"

@@ -33,9 +33,11 @@ module.exports = merge(common, {
   },
   devServer: {
     port: 3000,
-    contentBase: 'dist',
+    contentBase: './front/dist',
     watchContentBase: true,
     hot: true,
+    inline: true,
+    host: '0.0.0.0',
     headers: {
       'Access-Control-Allow-Origin': '*', // スクリプトを配布場所のオリジンと異なってもいいようにする
     },
