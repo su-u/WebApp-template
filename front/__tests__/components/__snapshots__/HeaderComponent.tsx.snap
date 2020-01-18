@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent HeaderComponent SnapShot 1`] = `
+<div
+  className="sc-AykKC POXrs"
+>
+  <div
+    className="sc-AykKD hpsEDM"
+  >
+    <a
+      data-test="head-title"
+      href="/"
+      onClick={[Function]}
+    >
+      テストアプリ
+    </a>
+  </div>
+</div>
+`;

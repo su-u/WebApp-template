@@ -25,9 +25,11 @@ module.exports = {
     window: 'readonly',
     location: 'readonly',
     document: 'readonly',
+    //テスト関係
     describe: true,
     expect: true,
     test: true,
+    beforeEach: true,
   },
   rules: {
     'no-console': 'warn',
