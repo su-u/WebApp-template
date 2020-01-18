@@ -47,6 +47,10 @@ module.exports = {
     'no-trailing-spaces': 'warn',
     'unicode-bom': 'warn',
     'max-len': 'warn',
+    'prefer-const': 'warn',
+    'arrow-parens': 'error',
+
+    'react/no-multi-comp': 'warn',
   },
   settings: {
     react: {
