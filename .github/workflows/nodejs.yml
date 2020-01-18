@@ -20,7 +20,7 @@ jobs:
       - name: yarn install, build
         run: |
           yarn install
-          yarn run build:p --if-present
+          yarn run build:p
       - name: yarn test
         run: |
           yarn test:u
