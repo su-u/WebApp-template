@@ -4,7 +4,7 @@
     "./front/__tests__/*"
   ],
   "compilerOptions": {
-    "outDir": "./dist",
+    "outDir": "./front/dist",
     "sourceMap": true,
     "strict": true,
     "strictFunctionTypes": true,
