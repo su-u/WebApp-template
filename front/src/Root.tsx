@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import Navigator from '@/Navigator';
+import Navigator from './Navigator';
 
 const Root = ({ store }: any) => (
   <>

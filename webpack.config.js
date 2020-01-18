@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js?[hash]',
   },
   entry: {
-    main: ['@babel/polyfill', path.resolve(__dirname, './src/index.tsx')],
+    main: ['@babel/polyfill', path.resolve(__dirname, './front/src/index.tsx')],
   },
   module: {
     rules: [
@@ -26,7 +26,7 @@ module.exports = {
       {
         test: /\.(js|jsx|ts|tsx)$/,
         use: ['thread-loader', 'cache-loader', 'babel-loader'],
-        include: path.resolve('./src'),
+        include: path.resolve('./front/src'),
         exclude: /node_modules/,
       },
       {
@@ -41,9 +41,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.resolve(__dirname, './src/html/index.html'),
+      template: path.resolve(__dirname, './front/src/html/index.html'),
     }),
-    new CopyPlugin([{ from: './src/public', to: '.' }]),
+    new CopyPlugin([{ from: './front/src/public', to: '.' }]),
     new HardSourceWebpackPlugin(),
   ],
 };
