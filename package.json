@@ -13,11 +13,10 @@
     "prettier:check": "prettier ./**/{src,__tests__}/**/*.{ts,tsx,js,jsx}",
     "prettier:setting": "prettier --write ./*.{js,jsx,ts,tsx} ./.*.{js,jsx,ts,tsx}",
     "lint:fix": "eslint --fix ./**/src/**/*.{ts,tsx} ./**/__tests__/**/*.tsx",
-    "lint:ccheck": "eslint ./**/src/**/*.{ts,tsx} ./**/__tests__/**/*.tsx",
+    "lint:check": "eslint ./**/src/**/*.{ts,tsx} ./**/__tests__/**/*.tsx",
     "test": "jest --env=jsdom",
     "test:c": "jest --env=jsdom --coverage",
-    "test:update": "jest -u --env=jsdom",
-    "test:onetime": "jest --env=jsdom"
+    "test:update": "jest -u --env=jsdom"
   },
   "name": "template",
   "version": "1.0.0",
