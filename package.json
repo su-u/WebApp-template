@@ -16,8 +16,7 @@
     "lint:ccheck": "eslint ./**/src/**/*.{ts,tsx} ./**/__tests__/**/*.tsx",
     "test": "jest --env=jsdom",
     "test:c": "jest --env=jsdom --coverage",
-    "test:update": "jest -u --env=jsdom",
-    "test:onetime": "jest --env=jsdom"
+    "test:update": "jest -u --env=jsdom"
   },
   "name": "template",
   "version": "1.0.0",
