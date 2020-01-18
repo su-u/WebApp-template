@@ -20,7 +20,7 @@ module.exports ={
         "eslint:recommended",
         "plugin:react/recommended",
         "plugin:prettier/recommended",
-        "prettier/react"
+        "prettier/react",
     ],
     "rules": {
         "no-console": "warn",
@@ -33,5 +33,15 @@ module.exports ={
         "no-unexpected-multiline": "error",
         "no-unreachable": "error",
         "indent": [ 2, 2 ],
+
+        "no-extra-bind": "warn",
+        "no-fallthrough": "warn",
+        "no-empty": "warn",
+        "block-scoped-var": "warn",
+        "camelcase": "warn",
+        "linebreak-style": "warn",
+        "no-trailing-spaces": "warn",
+        "unicode-bom": "warn",
+
     },
 };
