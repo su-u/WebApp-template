@@ -5,13 +5,13 @@ Array [
   <div
     data-test="div1"
   >
-    div1
+    テストアプリテキスト
   </div>,
   <div>
-    uuuull
+    divテキスト
   </div>,
   <h2>
-    a2aaaa
+    見出しテキスト
   </h2>,
 ]
 `;

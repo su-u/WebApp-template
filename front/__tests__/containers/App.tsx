@@ -11,10 +11,10 @@ describe('App', () => {
   });
   test('div1', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find(sel('div1')).text()).toEqual('div1');
+    expect(wrapper.find(sel('div1')).text()).toEqual('テストアプリテキスト');
   });
   test('h2', () => {
     const wrapper = shallow(<App />);
-    expect(wrapper.find('h2').text()).toEqual('a2aaaa');
+    expect(wrapper.find('h2').text()).toEqual('見出しテキスト');
   });
 });

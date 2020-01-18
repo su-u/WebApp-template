@@ -3,9 +3,9 @@ import React from 'react';
 const App = () => {
   return (
     <>
-      <div data-test="div1">div1</div>
-      <div>uuuull</div>
-      <h2>a2aaaa</h2>
+      <div data-test="div1">テストアプリテキスト</div>
+      <div>divテキスト</div>
+      <h2>見出しテキスト</h2>
     </>
   );
 };
