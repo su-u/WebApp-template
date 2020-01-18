@@ -1,0 +1,32 @@
+import React from 'react';
+import { render } from 'enzyme';
+import { MemoryRouter } from 'react-router';
+import renderer from 'react-test-renderer';
+import HeaderComponent from '@/components/HeaderComponent';
+import { sel } from '@/testUtilies/utility';
+
+describe('HeaderComponent', () => {
+  describe('HeaderComponent', () => {
+    let wrapper: any;
+
+    beforeEach(() => {
+      wrapper = render(
+        <MemoryRouter initialEntries={['/']}>
+          <HeaderComponent />
+        </MemoryRouter>
+      );
+    });
+
+    test('SnapShot', () => {
+      const root = renderer.create(
+        <MemoryRouter initialEntries={['/']}>
+          <HeaderComponent />
+        </MemoryRouter>
+      );
+      expect(root).toMatchSnapshot();
+    });
+    test('title', () => {
+      expect(wrapper.find(sel('head-title')).text()).toEqual('テストアプリ');
+    });
+  });
+});
