@@ -11,6 +11,16 @@ module.exports = {
   entry: { main: ['@babel/polyfill', path.resolve(__dirname, './src/index.tsx')] },
   module: {
     rules: [
+      // {
+      //   enforce: 'pre',
+      //   test: /\.(js|jsx|tsx|ts)$/,
+      //   include: path.resolve('./src'),
+      //   exclude: /(node_modules|dist)/,
+      //   loader: 'eslint-loader',
+      //   options: {
+      //     fix: true,
+      //   },
+      // },
       {
         test: /\.tsx$/,
         use: ['thread-loader', 'cache-loader', 'babel-loader'],
@@ -20,15 +30,6 @@ module.exports = {
       {
         test: /\.html/,
         use: [{ loader: 'html-loader' }],
-      },
-      {
-        enforce: 'pre',
-        test: /\.ts$/,
-        exclude: /(node_modules|dist)/,
-        loader: 'eslint-loader',
-        options: {
-          fix: true,
-        },
       },
     ],
   },

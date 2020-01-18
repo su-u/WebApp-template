@@ -3,7 +3,7 @@ import { Switch, Route, HashRouter } from 'react-router-dom';
 import GlobalStyle from '@/components/GlobalStyle';
 import App from '@/containers/App';
 
-const Rooting = () => (
+const Navigator = () => (
   <>
     <GlobalStyle />
     <HashRouter>
@@ -14,4 +14,4 @@ const Rooting = () => (
   </>
 );
 
-export default Rooting;
+export default Navigator;

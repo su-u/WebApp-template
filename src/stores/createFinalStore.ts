@@ -1,0 +1,13 @@
+import { applyMiddleware, createStore } from 'redux';
+import Thunk from 'redux-thunk';
+import Reducer from '@/reducers';
+
+const createFinalStore = () => {
+  const thunk_middle_ware = Thunk;
+  const middleware = applyMiddleware(thunk_middle_ware);
+  // const isDevelopEnv = process.env.NODE_ENV === 'development';
+  const store = createStore(Reducer, {}, middleware);
+  return store;
+};
+
+export default createFinalStore;

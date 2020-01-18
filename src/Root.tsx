@@ -1,16 +1,12 @@
 import React from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
-import GlobalStyle from '@/components/GlobalStyle';
-import App from '@/containers/App';
+import { Provider } from 'react-redux';
+import Navigator from '@/Navigator';
 
-const Root = () => (
+const Root = ({ store }: any) => (
   <>
-    <GlobalStyle />
-    <HashRouter>
-      <Switch>
-        <Route exact path={'/'} component={App} />
-      </Switch>
-    </HashRouter>
+    <Provider store={store}>
+      <Navigator />
+    </Provider>
   </>
 );
 
