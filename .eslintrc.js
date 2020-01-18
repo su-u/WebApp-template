@@ -1,8 +1,9 @@
 module.exports ={
-    "root": true,
-    "env": {
+    'root': true,
+    'env': {
         "es6": true,
-        "node": true
+        "node": true,
+        browser: true,
     },
     "parser": "babel-eslint",
     "plugins": [
@@ -22,6 +23,11 @@ module.exports ={
         "plugin:prettier/recommended",
         "prettier/react",
     ],
+    "globals": {
+        "window": "readonly",
+        "location": "readonly",
+        'document': 'readonly',
+    },
     "rules": {
         "no-console": "warn",
         "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
