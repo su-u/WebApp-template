@@ -1,0 +1,20 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import renderer from 'react-test-renderer';
+import App from '@/containers/App';
+import { sel } from '@/testUtilies/utility';
+
+describe('App', () => {
+  test('SnapShot', () => {
+    const root = renderer.create(<App />).toJSON();
+    expect(root).toMatchSnapshot();
+  });
+  test('div1', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find(sel('div1')).text()).toEqual('div1');
+  });
+  test('h2', () => {
+    const wrapper = shallow(<App />);
+    expect(wrapper.find('h2').text()).toEqual('a2aaaa');
+  });
+});
