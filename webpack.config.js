@@ -15,7 +15,7 @@ module.exports = {
     rules: [
       {
         enforce: 'pre',
-        test: /\.(js|jsx|tsx|ts)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         include: path.resolve('./src'),
         exclude: /(node_modules|dist)/,
         loader: 'eslint-loader',
@@ -24,7 +24,7 @@ module.exports = {
         },
       },
       {
-        test: /\.tsx$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         use: ['thread-loader', 'cache-loader', 'babel-loader'],
         include: path.resolve('./src'),
         exclude: /node_modules/,
