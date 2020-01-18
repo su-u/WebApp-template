@@ -23,7 +23,7 @@ module.exports ={
         "prettier/react"
     ],
     "rules": {
-        "no-console": 0,
+        "no-console": "warn",
         "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
         "quotes": ["error", "single"],
         "semi": ["error", "always"],
