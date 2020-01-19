@@ -5,7 +5,7 @@ const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 module.exports = {
   output: {
-    path: `${__dirname}/front/dist`,
+    path: `${__dirname}/dist`,
     filename: 'bundle.js?[hash]',
   },
   entry: {
