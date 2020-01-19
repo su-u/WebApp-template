@@ -482,4 +482,4 @@ MigrationBackup/
 # End of https://www.gitignore.io/api/git,react,visualstudio,jetbrains+all,visualstudiocode
 
 coverage/*
-front/dist/*
+dist/*

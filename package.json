@@ -20,7 +20,7 @@
   },
   "name": "template",
   "version": "1.0.0",
-  "main": "front/src/index.js",
+  "main": "front/src/index.ts",
   "license": "MIT",
   "dependencies": {
     "immutable": "^4.0.0-rc.12",

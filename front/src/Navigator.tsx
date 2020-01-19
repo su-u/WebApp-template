@@ -2,7 +2,8 @@ import React from 'react';
 import { Switch, Route, HashRouter } from 'react-router-dom';
 import GlobalStyle from './components/GlobalStyle';
 import App from './containers/App';
-import HeaderComponent from '@/components/HeaderComponent';
+import SimpleHeader from '@/components/Header/SimpleHeader';
+import NavigationHeader from '@/components/Header/NavigationHeader';
 
 export const Router = ({ path = '' }) => {
   return (
@@ -16,7 +17,7 @@ const Navigator = () => (
   <>
     <GlobalStyle />
     <HashRouter>
-      <HeaderComponent />
+      <NavigationHeader />
       <Router />
     </HashRouter>
   </>
