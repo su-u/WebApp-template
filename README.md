@@ -16,9 +16,40 @@ reactアプリケーションの自分用テンプレート
 - babel
 - linq
 
+## バックエンド
+- express
+
 ## テスト
 - jest
 - enzyme
 
-## GitHub Actions
-- node 10.x 'test'
+# Firebaseの利用
+- Cloud Firestore
+    データベース
+- Cloud Functions
+    バックエンド
+- Hosting
+    フロントの配信
+- Cloud Storage
+    バイナリストレージ
+- Performance Monitoring
+    パフォーマンス特性
+- Google Analytics
+    分析
+
+# 事前準備
+- node 8.xのインストール(functionが8を使用するため。）
+- yarnのインストール
+- firebase-toolsのインストール
+- git clone
+- `yarn run all-install`
+
+# GitHub Actions
+Pull Requestに対して動作するテスト。
+- node 10.x
+
+# 使用方法
+## Firebase deploy方法
+```
+firebase deploy
+```
