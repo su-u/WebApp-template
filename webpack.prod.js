@@ -12,18 +12,6 @@ module.exports = merge(common, {
     rules: [
       {
         test: /\.(ts|tsx)?$/,
-        use: {
-          loader: 'ts-loader',
-          options: {
-            configFile: 'tsconfig.prod.json',
-            transpileOnly: true,
-            happyPackMode: true,
-          },
-        },
-        exclude: /node_modules/,
-      },
-      {
-        test: /\.tsx$/,
         use: [
           {
             loader: 'babel-loader',
