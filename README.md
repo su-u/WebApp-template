@@ -38,7 +38,7 @@ reactアプリケーションの自分用テンプレート
     分析
 
 # 事前準備
-- node 8.xのインストール(functionが8を使用するため。）
+- node 10.xのインストール(functionが10を利用）
 - yarnのインストール
 - firebase-toolsのインストール
 - git clone
