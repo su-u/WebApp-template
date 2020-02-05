@@ -40,7 +40,6 @@ module.exports = merge(common, {
     watchContentBase: true,
     hot: true,
     inline: true,
-    host: HOST_ENV,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
