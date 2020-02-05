@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   output: {

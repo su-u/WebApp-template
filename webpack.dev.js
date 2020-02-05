@@ -4,6 +4,9 @@ const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const HOST_ENV =
+  process.env.NODE_ENV === 'development' ? 'localhost' : '0.0.0.0';
+
 module.exports = merge(common, {
   mode: 'development',
   // output: {
@@ -37,10 +40,18 @@ module.exports = merge(common, {
     watchContentBase: true,
     hot: true,
     inline: true,
-    host: '0.0.0.0',
+    host: HOST_ENV,
     headers: {
-      'Access-Control-Allow-Origin': '*', // スクリプトを配布場所のオリジンと異なってもいいようにする
+      'Access-Control-Allow-Origin': '*',
     },
   },
-  plugins: [new CleanWebpackPlugin(), new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new CleanWebpackPlugin(),
+    new webpack.HotModuleReplacementPlugin(),
+    // new webpack.DefinePlugin({
+    //   'process.env': {
+    //     NODE_ENV: JSON.stringify('development'),
+    //   },
+    // }),
+  ],
 });
