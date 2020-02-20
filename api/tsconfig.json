@@ -9,7 +9,11 @@
     "target": "es2019",
     "typeRoots": [
       "./node_modules/@types"
-    ]
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "compileOnSave": true,
   "include": [
