@@ -2,8 +2,9 @@
   "name": "api",
   "scripts": {
     "build": "tsc",
-    "serve": "yarn  run build && firebase serve --only functions",
-    "shell": "yarn  run build && firebase functions:shell",
+    "watch": "yarn run build --watch",
+    "serve": "yarn run build && firebase serve --only functions",
+    "shell": "yarn run build && firebase functions:shell",
     "start": "yarn run shell",
     "deploy": "firebase deploy --only functions",
     "logs": "firebase functions:log"
