@@ -1,4 +1,3 @@
-
 const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
