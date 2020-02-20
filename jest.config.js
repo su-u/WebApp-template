@@ -5,7 +5,7 @@ module.exports = {
     '^@/(.+)': '<rootDir>/front/src/$1',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'ts'],
-  setupFilesAfterEnv: ['<rootDir>/front/src/testUtilies/setupTests.ts'],
+  setupFilesAfterEnv: ['<rootDir>/front/src/testUtilities/setupTests.ts'],
   moduleDirectories: ['node_modules'],
   transform: {
     '^.+\\.(ts|tsx)$': 'ts-jest',
