@@ -3,7 +3,7 @@ import { render } from 'enzyme';
 import { MemoryRouter } from 'react-router';
 import renderer from 'react-test-renderer';
 import HeaderComponent from '../../../src/components/Header/SimpleHeader';
-import { sel } from '../../../src/testUtilies/utility';
+import { sel } from '../../../src/testUtilities/utility';
 
 describe('HeaderComponent', () => {
   describe('HeaderComponent', () => {

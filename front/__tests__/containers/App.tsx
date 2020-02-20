@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import renderer from 'react-test-renderer';
 import App from '@/containers/App';
-import { sel } from '@/testUtilies/utility';
+import { sel } from '@/testUtilities/utility';
 
 describe('App', () => {
   test('SnapShot', () => {
