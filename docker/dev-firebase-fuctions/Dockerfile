@@ -1,4 +1,4 @@
-FROM node:8
+FROM node:10.15.3-alpine
 WORKDIR /api
 
 RUN curl -o- -L https://yarnpkg.com/install.sh | sh
