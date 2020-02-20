@@ -1,11 +1,11 @@
+
 const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
-const HOST_ENV =
-  process.env.NODE_ENV === 'development' ? 'localhost' : '0.0.0.0';
+const HOST_ENV = process.env.HOST_ENV || 'localhost';
 
 module.exports = merge(common, {
   mode: 'development',
@@ -40,6 +40,7 @@ module.exports = merge(common, {
     watchContentBase: true,
     hot: true,
     inline: true,
+    host: HOST_ENV,
     headers: {
       'Access-Control-Allow-Origin': '*',
     },
