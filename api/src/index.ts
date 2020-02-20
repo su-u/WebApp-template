@@ -14,7 +14,9 @@ const logger = require('morgan');
 
 const app = express();
 
-app.use(logger('dev'));
+const LOGGER_ENV: string = process.env.LOGGER_ENV || 'combined';
+
+app.use(logger(LOGGER_ENV));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
