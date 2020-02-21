@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --display-error-details --progress",
     "start": "electron ../build/main.js",
-    "devstart": "electron ../build/main.js --debug"
+    "devstart": "electron ../build/main.js --debug",
+    "app-build": "electron-packager ../build sample --platform=darwin,win32 --arch=x64 --electron-version=8.0.1  --overwrite"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -15,6 +16,8 @@
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
     "electron": "^8.0.1",
+    "electron-packager": "^14.2.1",
+    "electron-prebuilt": "^1.4.13",
     "hard-source-webpack-plugin": "^0.13.1",
     "ts-loader": "^6.2.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
