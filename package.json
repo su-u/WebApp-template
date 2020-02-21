@@ -9,7 +9,7 @@
     "docker:remove": "docker rm $(docker ps -a -q)",
     "watch": "webpack-dev-server --config webpack.dev.js --host localhost --display-error-details --progress --color --info-verbosity verbose",
     "watch:docker": "webpack-dev-server --config webpack.dev.js --host 0.0.0.0 --display-error-details --progress --color --info-verbosity verbose",
-    "prettier:fix": "prettier --write ./{front,api,electron}/{src,__tests__}/**/*.{ts,tsx,js,jsx} ./{front,api,electron}/{src,__tests__}/*.{ts,tsx,js,jsx}  ./*.{js,jsx,ts,tsx}",
+    "prettier:fix": "prettier --write ./{front,api,electron}/{src,__tests__}/**/*.{ts,tsx,js,jsx} ./{front,api,electron}/{src,__tests__}/*.{ts,tsx,js,jsx} ./*.{js,jsx,ts,tsx} ./{front,api,electron}/*.{ts,tsx,js,jsx}",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx  --fix ./front/src ./front/__tests__ ./api/src",
     "lint:check": "eslint --ext .js,.jsx,.ts,.tsx ./front/src ./front/__tests__ ./api/src ./electron/src",
     "test": "jest --env=jsdom",

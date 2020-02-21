@@ -1,13 +1,13 @@
 {
   "name": "electron",
   "version": "1.0.0",
-  "main": "src/main.ts",
+  "main": "build/main.js",
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js --display-error-details --progress",
     "start": "electron ../build/main.js",
     "devstart": "electron ../build/main.js --debug",
-    "app-build": "electron-packager ../build sample --platform=darwin,win32 --arch=x64 --electron-version=8.0.1  --overwrite"
+    "app-build": "node build-win"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -15,7 +15,9 @@
     "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.1.1",
     "electron": "^8.0.1",
+    "electron-builder": "^22.3.2",
     "electron-packager": "^14.2.1",
     "electron-prebuilt": "^1.4.13",
     "hard-source-webpack-plugin": "^0.13.1",

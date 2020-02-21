@@ -2,6 +2,7 @@ const path = require('path');
 const HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -32,7 +33,11 @@ module.exports = {
     extensions: ['.ts', '.js', '.json'],
     plugins: [new TsconfigPathsPlugin({ configFile: 'tsconfig.json' })],
   },
-  plugins: [new HardSourceWebpackPlugin(), new CleanWebpackPlugin(),],
+  plugins: [
+    new HardSourceWebpackPlugin(),
+    new CleanWebpackPlugin(),
+    new CopyPlugin([{ from: './builder', to: '../build' },{ from: '../dist', to: '../build' }]),
+  ],
   node: {
     __dirname: false,
     __filename: false,

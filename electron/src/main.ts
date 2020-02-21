@@ -82,8 +82,9 @@ function createWindow() {
   // backWin.maximize();
   // マウスイベントを無視
   // backWin.setIgnoreMouseEvents(true, {forward: true});
-  win.loadFile('index.html');
+  // win.loadFile('../dist/index.html');
   // win.loadFile(path.join(__dirname, './index.html'));
+  win.loadURL(`file://${__dirname}/index.html`);
   // win.loadURL('file://' + __dirname + '/index.html');
   // 起動オプションに "--debug"があれば開発者ツールを起動
   if (process.argv.find(arg => arg === '--debug')) {
