@@ -483,3 +483,4 @@ MigrationBackup/
 
 coverage/*
 dist/*
+build/*
