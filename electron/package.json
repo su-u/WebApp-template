@@ -10,16 +10,9 @@
     "app-build": "node build-win"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
-    "babel-preset-env": "^1.7.0",
-    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
     "electron": "^8.0.1",
     "electron-builder": "^22.3.2",
-    "electron-packager": "^14.2.1",
-    "electron-prebuilt": "^1.4.13",
     "hard-source-webpack-plugin": "^0.13.1",
     "ts-loader": "^6.2.1",
     "tsconfig-paths-webpack-plugin": "^3.2.0",
