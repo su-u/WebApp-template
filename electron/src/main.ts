@@ -84,7 +84,7 @@ function createWindow() {
   // backWin.setIgnoreMouseEvents(true, {forward: true});
   // win.loadFile('../dist/index.html');
   // win.loadFile(path.join(__dirname, './index.html'));
-  win.loadURL(`file://${__dirname}/index.html`);
+  win.loadURL(`file://${__dirname}/../web/index.html`);
   // win.loadURL('file://' + __dirname + '/index.html');
   // 起動オプションに "--debug"があれば開発者ツールを起動
   if (process.argv.find(arg => arg === '--debug')) {

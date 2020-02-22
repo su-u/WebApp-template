@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config webpack.config.js --display-error-details --progress",
-    "start": "electron ../build/main.js",
-    "devstart": "electron ../build/main.js --debug",
+    "start": "electron ../dist/electron/main.js",
+    "devstart": "electron ../dist/electron/main.js --debug",
     "app-build": "node build-win"
   },
   "devDependencies": {

@@ -7,7 +7,7 @@ module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   output: {
-    path: `${__dirname}/../build`,
+    path: `${__dirname}/../dist/electron`,
     filename: 'main.js',
   },
   entry: path.resolve(__dirname, './src/main.ts'),
@@ -34,10 +34,7 @@ module.exports = {
   },
   plugins: [
     new HardSourceWebpackPlugin(),
-    new CopyPlugin([
-      { from: './builder', to: '../build' },
-      { from: '../dist', to: '../build' },
-    ]),
+    new CopyPlugin([{ from: './builder', to: '../' }]),
   ],
   node: {
     __dirname: false,
