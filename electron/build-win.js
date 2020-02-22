@@ -24,3 +24,4 @@ builder
     // handle error
     console.log(error);
   });
+// https://www.electron.build/configuration/configuration#configuration
