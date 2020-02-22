@@ -33,7 +33,7 @@ module.exports = {
   },
   rules: {
     'no-console': 'warn',
-    'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    // 'no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'semi-spacing': ['error', { after: true, before: false }],
@@ -53,7 +53,7 @@ module.exports = {
     'unicode-bom': 'warn',
     'max-len': 'warn',
     'prefer-const': 'warn',
-    'arrow-parens': 'error',
+    // 'arrow-parens': 'error',
 
     'react/no-multi-comp': 'warn',
   },

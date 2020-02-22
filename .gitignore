@@ -483,3 +483,5 @@ MigrationBackup/
 
 coverage/*
 dist/*
+build/*
+electron/dist/*
