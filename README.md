@@ -1,6 +1,8 @@
 # react-template
 reactアプリケーションの自分用テンプレート
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/80244424-4ec5-4508-969b-396914363c5d/deploy-status)](https://app.netlify.com/sites/webapp-template/deploys)
+
 # 概要
 ある程度簡単にreactを利用したWebアプリケーションを開発する雛形。
 バックエンドは自由に変更可能。
@@ -36,17 +38,16 @@ reactアプリケーションの自分用テンプレート
     フロントの配信
 - Cloud Storage
     バイナリストレージ
-- Performance Monitoring
-    パフォーマンス特性
-- Google Analytics
-    分析
+
+# Netlifyの利用
+
 
 ## Firebase アウトバウンドネットワークについて
 Firebase無料枠ではアウトバウンドネットワークを利用することはできない。
 従量課金制のプランに移行する必要がある。
 
 # 事前準備
-- node 10.xのインストール(functionが10を利用）
+- node 10.xのインストール(functionが10.xを利用）
 - yarnのインストール
 - firebase-toolsのインストール
 - git clone
@@ -62,16 +63,20 @@ Pull Requestに対して動作するテスト。
 ```
 yarn run build:d
 ```
+`dist/web`に出力。
 
 ## frontの開発サーバーの起動（WebpackServer)
 ```
 yarn run watch
 ```
+`localhost:3000`に展開。
 
 ## frontの開発サーバーの起動（Docker + WebpackServer)
 ```
 yarn run watch:docker
 ```
+`localhost` or `localhost/web`に展開
+
 
 ## Firebase deploy方法
 ```
