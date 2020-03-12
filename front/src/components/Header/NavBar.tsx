@@ -22,7 +22,7 @@ const NavBar = () => {
           <LoginButton>Login</LoginButton>
         </Toolbar>
       </Bar>
-      <Drawer width={200} open={open} onClose={() => setOpen(false)}>
+      <Drawer open={open} onClose={() => setOpen(false)}>
         <MenuItem>React</MenuItem>
         <MenuItem>Redux</MenuItem>
         <MenuItem>React Router</MenuItem>
@@ -42,7 +42,7 @@ const Container = styled.div`
 `;
 
 const Bar = styled(AppBar)`
-  absolute: static;
+  background-color: black;
 `;
 
 const Title = styled(Typography)`
