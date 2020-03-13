@@ -3,6 +3,81 @@
 exports[`App SnapShot 1`] = `
 Array [
   <div
+    className="sc-AykKD fdMVYA"
+  >
+    <header
+      className="MuiPaper-root MuiAppBar-root MuiAppBar-positionFixed MuiAppBar-colorPrimary sc-AykKE gRccnS mui-fixed MuiPaper-elevation4"
+    >
+      <div
+        className="MuiToolbar-root MuiToolbar-regular MuiToolbar-gutters"
+      >
+        <button
+          aria-label="menu"
+          className="MuiButtonBase-root MuiIconButton-root sc-AykKG hRKpiD"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              className="MuiSvgIcon-root"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+              />
+            </svg>
+          </span>
+        </button>
+        <h6
+          className="MuiTypography-root sc-AykKF hLiSe MuiTypography-h6"
+        >
+          Home
+        </h6>
+        <button
+          className="MuiButtonBase-root MuiButton-root MuiButton-text sc-AykKC bGZJKL"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Login
+          </span>
+        </button>
+      </div>
+    </header>
+  </div>,
+  <div
     data-test="div1"
   >
     テストアプリテキスト
