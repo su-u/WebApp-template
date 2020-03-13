@@ -1,6 +1,7 @@
 import React from 'react';
 import firebase from 'firebase';
 import { firebaseAuth } from '@/firebase';
+import Button from '@material-ui/core/Button';
 
 const AuthApp = () => {
   const [user, setUser] = React.useState<firebase.User | null>(null);
@@ -26,9 +27,13 @@ const AuthApp = () => {
         <p className="App-intro">UID: {user && user.uid}</p>
 
         {user ? (
-          <button onClick={logout}>Google Logout</button>
+          <Button variant="contained" color="secondary" onClick={logout}>
+            Google Logout
+          </Button>
         ) : (
-          <button onClick={login}>Google Login</button>
+          <Button variant="contained" onClick={login}>
+            Google Login
+          </Button>
         )}
       </div>
     </>
