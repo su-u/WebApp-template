@@ -485,3 +485,4 @@ coverage/*
 dist/*
 build/*
 electron/dist/*
+front/src/firebase/config.ts
