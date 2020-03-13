@@ -12,7 +12,7 @@ export const Router = ({ path = '' }) => {
   return (
     <Switch>
       <Route exact path={`${path}/`} component={App} />
-      <Route exact path={`${path}/test`} component={ButtonAppBar} />
+      <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
       <Route exact path={`${path}/auth`} component={AuthApp} />
     </Switch>
   );
@@ -22,7 +22,6 @@ const Navigator = () => (
   <StylesProvider injectFirst>
     <GlobalStyle />
     <HashRouter>
-      <ButtonAppBar />
       <MainContent>
         <Router />
       </MainContent>

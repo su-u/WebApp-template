@@ -2,6 +2,8 @@ import React from 'react';
 import firebase from 'firebase';
 import { firebaseAuth } from '@/firebase';
 import Button from '@material-ui/core/Button';
+import ButtonAppBar from '@/components/Header/NavBar';
+
 
 const AuthApp = () => {
   const [user, setUser] = React.useState<firebase.User | null>(null);
@@ -23,6 +25,7 @@ const AuthApp = () => {
 
   return (
     <>
+      <ButtonAppBar title="AuthApp" />
       <div className="App">
         <p className="App-intro">UID: {user && user.uid}</p>
 

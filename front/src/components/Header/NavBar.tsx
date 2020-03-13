@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { MenuItem } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -8,9 +7,15 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
+import SideMenu from '@/components/Header/SideMenu';
 
-const NavBar = () => {
+interface Props {
+  title: string;
+}
+
+const NavBar: React.FC<Props> = ({ title = 'AppBar' }: Props) => {
   const [open, setOpen] = React.useState(false);
+
   return (
     <Container>
       <Bar>
@@ -18,16 +23,12 @@ const NavBar = () => {
           <MenuButton aria-label="menu" onClick={() => setOpen(true)}>
             <MenuIcon />
           </MenuButton>
-          <Title variant="h6">News</Title>
+          <Title variant="h6">{title}</Title>
           <LoginButton>Login</LoginButton>
         </Toolbar>
       </Bar>
       <Drawer open={open} onClose={() => setOpen(false)}>
-        <MenuItem>React</MenuItem>
-        <MenuItem>Redux</MenuItem>
-        <MenuItem>React Router</MenuItem>
-        <MenuItem>Material UI</MenuItem>
-        <MenuItem>Electron</MenuItem>
+        <SideMenu />
       </Drawer>
     </Container>
   );
