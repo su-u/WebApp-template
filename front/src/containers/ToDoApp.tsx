@@ -3,11 +3,20 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import * as ToDoActions from '@/actions/todo';
 import ButtonAppBar from '@/components/header/NavBar';
+import ToDoList from '@/components/toDo/TodoList';
+import { toDoType } from '@/types/todo';
 
-const ToDoApp = () => {
+interface Props {
+  todoList: toDoType[];
+  todoActions: typeof ToDoActions;
+}
+
+const ToDoApp: React.FC<Props> = (props: Props) => {
+  const { todoList } = props;
   return (
     <>
       <ButtonAppBar title="ToDo" />
+      <ToDoList todoList={todoList}/>
     </>
   );
 };
