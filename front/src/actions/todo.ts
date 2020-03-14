@@ -1,8 +1,8 @@
-import { ToDoActions } from '@/actions';
+import { TodoActions } from '@/actions';
 
 export const addTodo = (name: string, description: string) => {
   return {
-    type: ToDoActions.ADD_TODO,
+    type: TodoActions.ADD_TODO,
     name,
     description,
   }
@@ -10,7 +10,7 @@ export const addTodo = (name: string, description: string) => {
 
 export const removeTodo = (key: number) => {
   return {
-    type: ToDoActions.REMOVE_TODO,
+    type: TodoActions.REMOVE_TODO,
     key,
   }
 };

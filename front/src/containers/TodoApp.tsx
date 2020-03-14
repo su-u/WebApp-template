@@ -1,14 +1,14 @@
 import React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
-import * as ToDoActions from '@/actions/todo';
+import * as TodoActions from '@/actions/todo';
 import ButtonAppBar from '@/components/header/NavBar';
 import ToDoList from '@/components/toDo/TodoList';
 import { toDoType } from '@/types/todo';
 
 interface Props {
   todoList: toDoType[];
-  todoActions: typeof ToDoActions;
+  todoActions: typeof TodoActions;
 }
 
 const TodoApp: React.FC<Props> = (props: Props) => {
@@ -29,7 +29,7 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = (dispatch: Dispatch<any>) => {
   return {
-    todoActions: bindActionCreators(ToDoActions, dispatch),
+    todoActions: bindActionCreators(TodoActions, dispatch),
   };
 };
 
