@@ -3,7 +3,7 @@ import firebase from 'firebase';
 import { firebaseAuth } from '@/firebase';
 import Button from '@material-ui/core/Button';
 import ButtonAppBar from '@/components/Header/NavBar';
-
+import { logout, googleProvider } from '@/firebase/Auth';
 
 const AuthApp = () => {
   const [user, setUser] = React.useState<firebase.User | null>(null);
@@ -15,12 +15,8 @@ const AuthApp = () => {
   });
 
   const login = () => {
-    const provider = new firebase.auth.GoogleAuthProvider();
+    const provider = googleProvider;
     firebaseAuth.signInWithRedirect(provider);
-  };
-
-  const logout = () => {
-    firebaseAuth.signOut();
   };
 
   return (
