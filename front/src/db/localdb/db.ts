@@ -2,7 +2,6 @@ import StorageAccessor from './storageAccessor';
 import DBResponse from '@/db/localdb/dbResponse';
 import DatabaseIndex from '@/db/localdb/databaseIndex';
 
-// eslint-disable-next-line no-unused-vars
 const DB = {
   set: <T>(key: string, value: T, indexDBKey: string): DBResponse => {
     let IndexDB: DatabaseIndex | null = StorageAccessor.get<DatabaseIndex>(
@@ -74,3 +73,5 @@ const DB = {
     }
   },
 };
+
+export default DB;
