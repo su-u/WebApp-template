@@ -5,7 +5,7 @@ interface Props {
   todo: toDoType;
 }
 
-const ToDoItem: React.FC<Props> = (props: Props) => {
+const TodoItem: React.FC<Props> = (props: Props) => {
   const { name, description } = props.todo;
   return (
     <>
@@ -16,4 +16,4 @@ const ToDoItem: React.FC<Props> = (props: Props) => {
   )
 };
 
-export default ToDoItem;
+export default TodoItem;

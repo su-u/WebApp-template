@@ -1,6 +1,6 @@
 import React from 'react';
 import { toDoType } from '@/types/todo';
-import ToDoItem from '@/components/toDo/ToDoItem';
+import TodoItem from '@/components/toDo/TodoItem';
 
 interface Props {
   todoList: toDoType[];
@@ -12,7 +12,7 @@ const ToDoList: React.FC<Props> = (props: Props) => {
     <>
       {todoList && todoList.map((value, index) => {
         return (<React.Fragment key={index}>
-          <ToDoItem todo={value}/>
+          <TodoItem todo={value}/>
         </React.Fragment>)
       })}
     </>

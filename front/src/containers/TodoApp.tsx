@@ -11,7 +11,7 @@ interface Props {
   todoActions: typeof ToDoActions;
 }
 
-const ToDoApp: React.FC<Props> = (props: Props) => {
+const TodoApp: React.FC<Props> = (props: Props) => {
   const { todoList } = props;
   return (
     <>
@@ -36,5 +36,5 @@ const mapDispatchToProps = (dispatch: Dispatch<any>) => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(ToDoApp);
+)(TodoApp);
 

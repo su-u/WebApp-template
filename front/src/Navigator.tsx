@@ -6,7 +6,7 @@ import GlobalStyle from './components/GlobalStyle';
 import ButtonAppBar from '@/components/header/NavBar';
 import App from '@/containers/App';
 import AuthApp from '@/containers/AuthApp';
-import ToDoApp from '@/containers/ToDoApp';
+import ToDoApp from '@/containers/TodoApp';
 
 // eslint-disable-next-line react/prop-types
 export const Router = ({ path = '' }) => {
