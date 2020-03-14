@@ -8,12 +8,10 @@ interface Props {
 const TodoItem: React.FC<Props> = (props: Props) => {
   const { name, description } = props.todo;
   return (
-    <>
-      {name}
-      ,
-      {description}
-    </>
-  )
+    <div>
+      {name},{description}
+    </div>
+  );
 };
 
 export default TodoItem;
