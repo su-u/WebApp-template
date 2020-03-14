@@ -1,5 +1,6 @@
 import { Map } from 'immutable';
 import { TodoActions } from '@/actions';
+import { todoType } from '@/types/todo';
 
 const initState = Map({});
 
@@ -26,6 +27,10 @@ const todo = (state: any = initState, action: any) => {
       }
       break;
     case TodoActions.REMOVE_TODO:
+      const list = state.get('todoList').filter((value: todoType) => {
+        return value.key !== action.key;
+      });
+      return state.set('todoList', list);
       break;
     default:
       break;

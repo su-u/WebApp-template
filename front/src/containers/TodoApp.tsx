@@ -18,7 +18,7 @@ const TodoApp: React.FC<Props> = (props: Props) => {
     <>
       <ButtonAppBar title="ToDo" />
       <TodoAdd todoActions={todoActions} />
-      <TodoList todoList={todoList} />
+      <TodoList todoList={todoList} todoActions={todoActions} />
     </>
   );
 };
