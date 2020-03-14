@@ -1,8 +1,8 @@
 import React from 'react';
-import { toDoType } from '@/types/todo';
+import { todoType } from '@/types/todo';
 
 interface Props {
-  todo: toDoType;
+  todo: todoType;
 }
 
 const TodoItem: React.FC<Props> = (props: Props) => {

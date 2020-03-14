@@ -4,10 +4,10 @@ import { connect } from 'react-redux';
 import * as TodoActions from '@/actions/todo';
 import ButtonAppBar from '@/components/header/NavBar';
 import ToDoList from '@/components/toDo/TodoList';
-import { toDoType } from '@/types/todo';
+import { todoType } from '@/types/todo';
 
 interface Props {
-  todoList: toDoType[];
+  todoList: todoType[];
   todoActions: typeof TodoActions;
 }
 
