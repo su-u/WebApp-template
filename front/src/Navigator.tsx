@@ -6,6 +6,7 @@ import GlobalStyle from './components/GlobalStyle';
 import ButtonAppBar from '@/components/Header/NavBar';
 import App from '@/containers/App';
 import AuthApp from '@/containers/AuthApp';
+import ToDoApp from '@/containers/ToDoApp';
 
 // eslint-disable-next-line react/prop-types
 export const Router = ({ path = '' }) => {
@@ -14,6 +15,7 @@ export const Router = ({ path = '' }) => {
       <Route exact path={`${path}/`} component={App} />
       <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
       <Route exact path={`${path}/auth`} component={AuthApp} />
+      <Route exact path={`${path}/todo`} component={ToDoApp} />
     </Switch>
   );
 };
