@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '@/actions/todo';
@@ -17,11 +18,24 @@ const TodoApp: React.FC<Props> = (props: Props) => {
   return (
     <>
       <ButtonAppBar title="ToDo" />
-      <TodoAdd todoActions={todoActions} />
-      <TodoList todoList={todoList} todoActions={todoActions} />
+      <Container>
+        <AddContainer>
+          <TodoAdd todoActions={todoActions} />
+        </AddContainer>
+        <TodoList todoList={todoList} todoActions={todoActions} />
+      </Container>
     </>
   );
 };
+
+const Container = styled.div`
+  max-width: 800px;
+  margin: 0 auto;
+`;
+
+const AddContainer = styled.div`
+  padding-top: 20px;
+`;
 
 const mapStateToProps = (state: any) => {
   return {
