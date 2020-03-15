@@ -17,14 +17,19 @@ const TodoAdd: React.FC<Props> = (props: Props) => {
   const addTodo = () => {
     const nameValue = nameRef.current.value.trim();
     const descriptionValue = descriptionRef.current.value.trim();
-    if(nameValue.length === 0 || descriptionValue.length === 0)return ;
+    if (nameValue.length === 0 || descriptionValue.length === 0) return;
 
     todoActions.addTodo(nameValue, descriptionValue);
   };
 
   return (
     <Container>
-      <TextField inputRef={nameRef} id="outlined-name" label="name" variant="outlined" />
+      <TextField
+        inputRef={nameRef}
+        id="outlined-name"
+        label="name"
+        variant="outlined"
+      />
       <TextField
         inputRef={descriptionRef}
         id="outlined-description"

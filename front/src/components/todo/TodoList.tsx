@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 import Emutable from 'linq';
 import Grid from '@material-ui/core/Grid';
 import { todoType } from '@/types/todo';
@@ -18,9 +18,16 @@ const TodoList: React.FC<Props> = (props: Props) => {
     <Container>
       <Grid container spacing={3}>
         {todoList &&
-        Emutable.from(todoList).reverse().toArray().map(value => (
-            <TodoItem key={value.key} todo={value} todoActions={todoActions} />
-          ))}
+          Emutable.from(todoList)
+            .reverse()
+            .toArray()
+            .map(value => (
+              <TodoItem
+                key={value.key}
+                todo={value}
+                todoActions={todoActions}
+              />
+            ))}
       </Grid>
     </Container>
   );
