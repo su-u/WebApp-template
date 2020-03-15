@@ -11,8 +11,8 @@ interface Props {
 const TodoAdd: React.FC<Props> = (props: Props) => {
   const { todoActions } = props;
 
-  const nameRef = React.createRef<any>(null);
-  const descriptionRef = React.createRef<any>(null);
+  const nameRef = React.createRef<any>();
+  const descriptionRef = React.createRef<any>();
 
   const addTodo = () => {
     const nameValue = nameRef.current.value.trim();
