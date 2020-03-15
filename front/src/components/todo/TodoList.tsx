@@ -12,6 +12,7 @@ interface Props {
 
 const TodoList: React.FC<Props> = (props: Props) => {
   const { todoList, todoActions } = props;
+
   return (
     <Container>
       <Grid container spacing={3}>
