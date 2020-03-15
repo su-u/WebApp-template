@@ -11,16 +11,20 @@ interface Props {
 const TodoAdd: React.FC<Props> = (props: Props) => {
   const { todoActions } = props;
   const addTodo = () => {
-todoActions.addTodo('test', 'test');
-};
+    todoActions.addTodo('test', 'test');
+  };
 
-return (
-  <Container>
-    <TextField id="outlined-name" label="name" variant="outlined" />
-    <TextField id="outlined-description" label="description" variant="outlined" />
-    <AddButton onClick={addTodo}>追加</AddButton >
-  </Container>
-);
+  return (
+    <Container>
+      <TextField id="outlined-name" label="name" variant="outlined" />
+      <TextField
+        id="outlined-description"
+        label="description"
+        variant="outlined"
+      />
+      <AddButton onClick={addTodo}>追加</AddButton>
+    </Container>
+  );
 };
 
 const Container = styled.div`
@@ -31,7 +35,7 @@ const Container = styled.div`
 const AddButton = styled(Button)`
   margin: 9.75px 0 9.75px 10px;
   background-color: #9e9e9e;
-  :hover{
+  :hover {
     background-color: #bdbdbd;
   }
 `;
