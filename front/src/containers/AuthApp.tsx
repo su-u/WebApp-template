@@ -2,7 +2,7 @@ import React from 'react';
 import firebase from 'firebase';
 import { firebaseAuth } from '@/firebase';
 import Button from '@material-ui/core/Button';
-import ButtonAppBar from '@/components/Header/NavBar';
+import ButtonAppBar from '@/components/header/NavBar';
 import { logout, googleProvider } from '@/firebase/Auth';
 
 const AuthApp = () => {

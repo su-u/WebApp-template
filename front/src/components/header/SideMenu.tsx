@@ -14,7 +14,9 @@ const SideMenu = () => {
       <Link to={'/auth'}>
         <MenuItem>Auth</MenuItem>
       </Link>
-      <MenuItem>Material UI</MenuItem>
+      <Link to={'/todo'}>
+        <MenuItem>ToDoApp</MenuItem>
+      </Link>
       <MenuItem>Electron</MenuItem>
     </>
   );

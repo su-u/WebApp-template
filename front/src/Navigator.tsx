@@ -3,9 +3,10 @@ import { Switch, Route, HashRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { StylesProvider } from '@material-ui/core/styles';
 import GlobalStyle from './components/GlobalStyle';
-import ButtonAppBar from '@/components/Header/NavBar';
+import ButtonAppBar from '@/components/header/NavBar';
 import App from '@/containers/App';
 import AuthApp from '@/containers/AuthApp';
+import ToDoApp from '@/containers/TodoApp';
 
 // eslint-disable-next-line react/prop-types
 export const Router = ({ path = '' }) => {
@@ -14,6 +15,7 @@ export const Router = ({ path = '' }) => {
       <Route exact path={`${path}/`} component={App} />
       <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
       <Route exact path={`${path}/auth`} component={AuthApp} />
+      <Route exact path={`${path}/todo`} component={ToDoApp} />
     </Switch>
   );
 };
