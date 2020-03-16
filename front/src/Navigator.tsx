@@ -7,15 +7,18 @@ import ButtonAppBar from '@/components/header/NavBar';
 import App from '@/containers/App';
 import AuthApp from '@/containers/AuthApp';
 import ToDoApp from '@/containers/TodoApp';
+import AuthOnly from '@/components/AuthOnly';
 
 // eslint-disable-next-line react/prop-types
 export const Router = ({ path = '' }) => {
   return (
     <Switch>
       <Route exact path={`${path}/`} component={App} />
-      <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
-      <Route exact path={`${path}/auth`} component={AuthApp} />
       <Route exact path={`${path}/todo`} component={ToDoApp} />
+      <Route exact path={`${path}/auth`} component={AuthApp} />
+      <AuthOnly>
+        <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
+      </AuthOnly>
     </Switch>
   );
 };
