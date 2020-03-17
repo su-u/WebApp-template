@@ -22,24 +22,16 @@ const AuthOnly: React.FC<Props> = (props: Props) => {
       }
     });
   });
-  console.log(signedCheck);
-  console.log(signedIn);
-  console.log(children);
 
   return (
     <>
       state: {signedCheck}
       login: {signedIn}
-      {signedIn ?
-        <>
-          {children}
-        </>
-        :
-        <>out</>
-        // <Redirect to="/" />
+      {signedIn ? <>{children}</> : <>out</>
+      // <Redirect to="/" />
       }
     </>
-  )
+  );
 };
 
 export default AuthOnly;
