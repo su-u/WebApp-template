@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -24,7 +25,9 @@ const NavBar: React.FC<Props> = ({ title = 'AppBar' }: Props) => {
             <MenuIcon />
           </MenuButton>
           <Title variant="h6">{title}</Title>
-          <LoginButton>Login</LoginButton>
+          <LoginButton>
+            <LoginLink to={'/auth'}>Login</LoginLink>
+          </LoginButton>
         </Toolbar>
       </Bar>
       <Drawer open={open} onClose={() => setOpen(false)}>
@@ -36,6 +39,11 @@ const NavBar: React.FC<Props> = ({ title = 'AppBar' }: Props) => {
 
 const LoginButton = styled(Button)`
   color: white;
+`;
+
+const LoginLink = styled(Link)`
+  color: white;
+  text-decoration: none;
 `;
 
 const Container = styled.div`
