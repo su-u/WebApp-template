@@ -38,7 +38,7 @@ module.exports = merge(common, {
     contentBase: './front/dist',
     watchContentBase: true,
     hot: true,
-    inline: true,
+    // inline: true,
     host: HOST_ENV,
     headers: {
       'Access-Control-Allow-Origin': '*',
