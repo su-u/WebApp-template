@@ -2,7 +2,7 @@ import React from 'react';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Link } from 'react-router-dom';
 
-const SideMenu = () => {
+export const SideMenu: React.FC = () => {
   return (
     <>
       <Link to={'/'}>
@@ -21,5 +21,3 @@ const SideMenu = () => {
     </>
   );
 };
-
-export default SideMenu;

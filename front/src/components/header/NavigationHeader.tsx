@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const NavtgationHeader = () => {
+export const NavtgationHeader: React.FC = () => {
   const title = 'テストアプリA';
   return (
     <>
@@ -37,5 +37,3 @@ const Title = styled.div`
     color: white;
   }
 `;
-
-export default NavtgationHeader;

@@ -1,15 +1,13 @@
 import React from 'react';
-import ButtonAppBar from '@/components/header/NavBar';
+import { NavBar } from '@/components/header/NavBar';
 
-const App = () => {
+export const App: React.FC = () => {
   return (
     <>
-      <ButtonAppBar title="Home" />
+      <NavBar title="Home" />
       <div data-test="div1">テストアプリテキスト</div>
       <div>divテキスト</div>
       <h2>見出しテキスト</h2>
     </>
   );
 };
-
-export default App;

@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const SimpleHeader = () => {
+export const SimpleHeader: React.FC = () => {
   const title = 'テストアプリ';
   return (
     <>
@@ -37,5 +37,3 @@ const Title = styled.div`
     color: white;
   }
 `;
-
-export default SimpleHeader;

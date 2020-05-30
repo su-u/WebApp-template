@@ -2,12 +2,12 @@ import React from 'react';
 import { Switch, Route, HashRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { StylesProvider } from '@material-ui/core/styles';
-import GlobalStyle from './components/GlobalStyle';
-import ButtonAppBar from '@/components/header/NavBar';
-import App from '@/containers/App';
-import AuthApp from '@/containers/AuthApp';
+import { GlobalStyle } from './components/GlobalStyle';
+import { NavBar } from '@/components/header/NavBar';
+import { App } from '@/containers/App';
+import { AuthApp } from '@/containers/AuthApp';
 import ToDoApp from '@/containers/TodoApp';
-import AuthOnly from '@/components/AuthOnly';
+import { AuthOnly } from '@/components/AuthOnly';
 
 export const Router: React.FC<{ path: string }> = ({ path = '' }) => {
   return (
@@ -16,13 +16,13 @@ export const Router: React.FC<{ path: string }> = ({ path = '' }) => {
       <Route exact path={`${path}/todo`} component={ToDoApp} />
       <Route exact path={`${path}/auth`} component={AuthApp} />
       <AuthOnly>
-        <Route exact path={`${path}/appbar`} component={ButtonAppBar} />
+        <Route exact path={`${path}/appbar`} component={NavBar} />
       </AuthOnly>
     </Switch>
   );
 };
 
-const Navigator = () => (
+export const Navigator: React.FC = () => (
   <StylesProvider injectFirst>
     <GlobalStyle />
     <HashRouter>
@@ -36,5 +36,3 @@ const Navigator = () => (
 const MainContent = styled.div`
   margin-top: 64px;
 `;
-
-export default Navigator;

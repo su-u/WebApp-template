@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as TodoActions from '@/actions/todo';
-import ButtonAppBar from '@/components/header/NavBar';
+import { NavBar } from '@/components/header/NavBar';
 import TodoList from '@/components/todo/TodoList';
 import TodoAdd from '@/components/todo/TodoAdd';
 import { todoType } from '@/types/todo';
@@ -17,7 +17,7 @@ const TodoApp: React.FC<Props> = (props: Props) => {
   const { todoList, todoActions } = props;
   return (
     <>
-      <ButtonAppBar title="ToDo" />
+      <NavBar title="ToDo" />
       <Container>
         <AddContainer>
           <TodoAdd todoActions={todoActions} />

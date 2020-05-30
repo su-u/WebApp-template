@@ -2,10 +2,10 @@ import React from 'react';
 import firebase from 'firebase';
 import { firebaseAuth } from '@/firebase';
 import Button from '@material-ui/core/Button';
-import ButtonAppBar from '@/components/header/NavBar';
+import { NavBar } from '@/components/header/NavBar';
 import { logout, googleProvider } from '@/firebase/Auth';
 
-const AuthApp = () => {
+export const AuthApp: React.FC = () => {
   const [user, setUser] = React.useState<firebase.User | null>(null);
 
   React.useEffect(() => {
@@ -21,7 +21,7 @@ const AuthApp = () => {
 
   return (
     <>
-      <ButtonAppBar title="AuthApp" />
+      <NavBar title="AuthApp" />
       <div className="App">
         <p className="App-intro">UID: {user && user.uid}</p>
 
@@ -38,5 +38,3 @@ const AuthApp = () => {
     </>
   );
 };
-
-export default AuthApp;

@@ -8,13 +8,13 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Drawer from '@material-ui/core/Drawer';
-import SideMenu from '@/components/header/SideMenu';
+import { SideMenu } from '@/components/header/SideMenu';
 
 interface Props {
   title: string;
 }
 
-const NavBar: React.FC<Props> = ({ title = 'AppBar' }: Props) => {
+export const NavBar: React.FC<Props> = ({ title = 'AppBar' }: Props) => {
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -62,5 +62,3 @@ const MenuButton = styled(IconButton)`
   margin: 0 16px 0 -12px;
   color: white;
 `;
-
-export default NavBar;
