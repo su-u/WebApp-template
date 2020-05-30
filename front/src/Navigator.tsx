@@ -9,8 +9,7 @@ import AuthApp from '@/containers/AuthApp';
 import ToDoApp from '@/containers/TodoApp';
 import AuthOnly from '@/components/AuthOnly';
 
-// eslint-disable-next-line react/prop-types
-export const Router = ({ path = '' }) => {
+export const Router: React.FC<{ path: string }> = ({ path = '' }) => {
   return (
     <Switch>
       <Route exact path={`${path}/`} component={App} />
@@ -28,7 +27,7 @@ const Navigator = () => (
     <GlobalStyle />
     <HashRouter>
       <MainContent>
-        <Router />
+        <Router path="" />
       </MainContent>
     </HashRouter>
   </StylesProvider>
